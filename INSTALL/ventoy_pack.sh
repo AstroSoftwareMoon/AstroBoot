@@ -236,9 +236,9 @@ xz --check=crc32 $tmpdir/boot/core.img
 
 cp $OPT ./tool $tmpdir/
 rm -f $tmpdir/ENROLL_THIS_KEY_IN_MOKMANAGER.cer
-cp $OPT Ventoy2Disk.sh $tmpdir/
-cp $OPT VentoyWeb.sh $tmpdir/
-cp $OPT VentoyPlugson.sh $tmpdir/
+cp $OPT AstroBoot2Disk.sh $tmpdir/
+cp $OPT AstroBootWeb.sh $tmpdir/
+cp $OPT AstroBootPlugson.sh $tmpdir/
 cp $OPT VentoyVlnk.sh $tmpdir/
 cp $OPT VentoyGUI* $tmpdir/
 
@@ -247,9 +247,9 @@ cp $OPT README $tmpdir/
 cp $OPT plugin $tmpdir/
 cp $OPT CreatePersistentImg.sh $tmpdir/
 cp $OPT ExtendPersistentImg.sh $tmpdir/
-dos2unix -q $tmpdir/Ventoy2Disk.sh
-dos2unix -q $tmpdir/VentoyWeb.sh
-dos2unix -q $tmpdir/VentoyPlugson.sh
+dos2unix -q $tmpdir/AstroBoot2Disk.sh
+dos2unix -q $tmpdir/AstroBootWeb.sh
+dos2unix -q $tmpdir/AstroBootPlugson.sh
 dos2unix -q $tmpdir/VentoyVlnk.sh
 
 
@@ -306,9 +306,9 @@ done
 #chmod 
 find $tmpdir/ -type d -exec chmod 755 "{}" +
 find $tmpdir/ -type f -exec chmod 644 "{}" +
-chmod +x $tmpdir/Ventoy2Disk.sh
-chmod +x $tmpdir/VentoyWeb.sh
-chmod +x $tmpdir/VentoyPlugson.sh
+chmod +x $tmpdir/AstroBoot2Disk.sh
+chmod +x $tmpdir/AstroBootWeb.sh
+chmod +x $tmpdir/AstroBootPlugson.sh
 chmod +x $tmpdir/VentoyVlnk.sh
 chmod +x $tmpdir/VentoyGUI*
 chmod +x $tmpdir/tool/*.sh

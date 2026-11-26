@@ -1,149 +1,117 @@
-<h1 align="center">
-  <a href=https://www.ventoy.net/>Ventoy</a>
-</h1>
+<p align="center"><img src="docs/banner.png" alt="AstroBoot" width="100%"></p>
+
+<p align="center"><img src="docs/logo.png" alt="Logo de AstroBoot" width="140"></p>
+
+# AstroBoot
+
+> **Un solo USB para arrancarlo todo.** Copia tus ISO y elige cuál arrancar. Sin formatear cada vez, sin herramientas extra.
+
+AstroBoot es el arrancador USB de la familia **Astro**: la luna con el símbolo de encendido. Es un fork de [Ventoy](https://github.com/ventoy/Ventoy) de longpanda, distribuido bajo **GPL-3.0** (ver `COPYING`, `License/` y [`THIRD_PARTY_NOTICES.md`](THIRD_PARTY_NOTICES.md)). El README original se conserva en [`DOC/UPSTREAM_README.md`](DOC/UPSTREAM_README.md).
+
+## Descargar
+
+Ve a **[Releases](https://github.com/AstroSoftwareMoon/AstroBoot/releases/latest)**:
+
+| Sistema | Archivo | Cómo usarlo |
+|---|---|---|
+| Windows | `astroboot-1.0.0-windows.zip` | Descomprime y ejecuta `AstroBoot2Disk.exe` |
+| Linux | `astroboot-1.0.0-linux.tar.gz` | `sudo sh AstroBootWeb.sh` (interfaz web) o `sudo sh AstroBoot2Disk.sh -i /dev/sdX` |
+
+Después, copia tus archivos `.iso`, `.wim`, `.img`, `.vhd(x)` o `.efi` a la partición **AstroBoot** del USB, en las carpetas que quieras.
+
+## En imágenes
+
+<p align="center"><img src="docs/media/tour.gif" alt="Recorrido por el menú de AstroBoot" width="100%"></p>
 
 <p align="center">
-  <img src="https://img.shields.io/github/release/ventoy/Ventoy.svg?style=for-the-badge">
-  <img src="https://img.shields.io/github/license/ventoy/Ventoy?style=for-the-badge">
-  <img src="https://img.shields.io/github/stars/ventoy/Ventoy?style=for-the-badge">
-  <img src="https://img.shields.io/github/downloads/ventoy/Ventoy/total.svg?style=for-the-badge">
-  <img src="https://img.shields.io/github/actions/workflow/status/ventoy/Ventoy/ci.yml?label=actions&logo=github&style=for-the-badge">
+  <img src="docs/media/menu-main.png" alt="Menú principal" width="49%">
+  <img src="docs/media/menu-tools.png" alt="Herramientas AstroBoot" width="49%">
+  <img src="docs/media/menu-f5.png" alt="Menú F5" width="49%">
+  <img src="docs/media/sysinfo.png" alt="Información del sistema" width="49%">
+  <img src="docs/media/memtest.png" alt="Memtest86+ arrancado desde AstroBoot" width="49%">
+  <img src="docs/media/find-os.png" alt="Buscador de sistemas instalados" width="49%">
 </p>
 
-<h4 align="left">
-Ventoy is an open source tool to create bootable USB drive for ISO/WIM/IMG/VHD(x)/EFI files. <br/>
-With Ventoy, you don't need to format the disk over and over, just copy the image files to the USB drive and boot them.   
-You can copy many image files at a time and Ventoy will give you a boot menu to select them. <br/> 
-You can also browse ISO/WIM/IMG/VHD(x)/EFI files in local disk and boot them.<br/>
-x86 Legacy BIOS, IA32 UEFI, x86_64 UEFI, ARM64 UEFI and MIPS64EL UEFI are supported in the same way.<br/>
-Both MBR and GPT partition style are supported in the same way.<br/>
-Most type of OS supported(Windows/WinPE/Linux/Unix/ChromeOS/Vmware/Xen...) <br/>
-  1300+ ISO files are tested (<a href="https://www.ventoy.net/en/isolist.html">List</a>). 90%+ distros in <a href="https://distrowatch.com/">distrowatch.com</a> supported (<a href="https://www.ventoy.net/en/distrowatch.html">Details</a>). <br/>
-<br/>Official Website: <a href=https://www.ventoy.net>https://www.ventoy.net</a>
-</h4>
+### Instalador web (Linux)
 
-# Tested OS
-**Windows**  
-Windows 7, Windows 8, Windows 8.1, Windows 10, Windows 11, Windows Server 2012, Windows Server 2012 R2, Windows Server 2016, Windows Server 2019, Windows Server 2022, Windows Server 2025, WinPE
+<p align="center"><img src="docs/media/webui.png" alt="AstroBoot2Disk web" width="60%"></p>
 
-**Linux**  
-Debian, Ubuntu, CentOS(6/7/8/9/10), RHEL(6/7/8/9/10), Deepin, Fedora, Rocky Linux, AlmaLinux, EuroLinux(6/7/8/9), openEuler, OpenAnolis, SLES, openSUSE, MX Linux, Manjaro, Linux Mint, Endless OS, Elementary OS, Solus, Linx, Zorin, antiX, PClinuxOS, Arch, ArcoLinux, ArchLabs, BlackArch, Obarun, Artix Linux, Puppy Linux, Tails, Slax, Kali, Mageia, Slackware, Q4OS, Archman, Gentoo, Pentoo, NixOS, Kylin, openKylin, Ubuntu Kylin, KylinSec, Lubuntu, Xubuntu, Kubuntu, Ubuntu MATE, Ubuntu Budgie, Ubuntu Studio, Bluestar, OpenMandriva, ExTiX, Netrunner, ALT Linux, Nitrux, Peppermint, KDE neon, Linux Lite, Parrot OS, Qubes, Pop OS, ROSA, Void Linux, Star Linux, EndeavourOS, MakuluLinux, Voyager, Feren, ArchBang, LXLE, Knoppix, Calculate Linux, Clear Linux, Pure OS, Oracle Linux, Trident, Septor, Porteus, Devuan, GoboLinux, 4MLinux, Simplicity Linux, Zeroshell, Android-x86, netboot.xyz, Slitaz, SuperGrub2Disk, Proxmox VE, Kaspersky Rescue, SystemRescueCD, MemTest86, MemTest86+, MiniTool Partition Wizard, Parted Magic, veket, Sabayon, Scientific, alpine, ClearOS, CloneZilla, Berry Linux, Trisquel, Ataraxia Linux, Minimal Linux Live, BackBox Linux, Emmabuntüs, ESET SysRescue Live,Nova Linux, AV Linux, RoboLinux, NuTyX, IPFire, SELKS, ZStack, Enso Linux, Security Onion, Network Security Toolkit, Absolute Linux, TinyCore, Springdale Linux, Frost Linux, Shark Linux, LinuxFX, Snail Linux, Astra Linux, Namib Linux, Resilient Linux, Virage Linux, Blackweb Security OS, R-DriveImage, O-O.DiskImage, Macrium, ToOpPy LINUX, GNU Guix, YunoHost, foxclone, siduction, Adelie Linux, Elive, Pardus, CDlinux, AcademiX, Austrumi, Zenwalk, Anarchy, DuZeru, BigLinux, OpenMediaVault, Ubuntu DP, Exe GNU/Linux, 3CX Phone System, KANOTIX, Grml, Karoshi, PrimTux, ArchStrike, CAELinux, Cucumber, Fatdog, ForLEx, Hanthana, Kwort, MiniNo, Redcore, Runtu, Asianux, Clu Linux Live, Uruk, OB2D, BlueOnyx, Finnix, HamoniKR, Parabola, LinHES, LinuxConsole, BEE free, Untangle, Pearl, Thinstation, TurnKey, tuxtrans, Neptune, HefftorLinux, GeckoLinux, Mabox Linux, Zentyal, Maui, Reborn OS, SereneLinux , SkyWave Linux, Kaisen Linux, Regata OS, TROM-Jaro, DRBL Linux, Chalet OS, Chapeau, Desa OS, BlankOn, OpenMamba, Frugalware, Kibojoe Linux, Revenge OS, Tsurugi Linux, Drauger OS, Hash Linux, gNewSense, Ikki Boot, SteamOS, Hyperbola, VyOS, EasyNAS, SuperGamer, Live Raizo, Swift Linux, RebeccaBlackOS, Daphile, CRUX, Univention, Ufficio Zero, Rescuezilla, Phoenix OS, Garuda Linux, Mll, NethServer, OSGeoLive, Easy OS, Volumio, FreedomBox, paldo, UBOS, Recalbox, batocera, Lakka, LibreELEC, Pardus Topluluk, Pinguy, KolibriOS, Elastix, Arya, Omoikane, Omarine, Endian Firewall, Hamara, Rocks Cluster, MorpheusArch, Redo, Slackel, SME Server, APODIO, Smoothwall, Dragora, Linspire, Secure-K OS, Peach OSI, Photon, Plamo, SuperX, Bicom, Ploplinux, HP SPP, LliureX, Freespire, DietPi, BOSS, Webconverger, Lunar, TENS, Source Mage, RancherOS, T2, Vine, Pisi, blackPanther, mAid, Acronis, Active.Boot, AOMEI, Boot.Repair, CAINE, DaRT, EasyUEFI, R-Drive, PrimeOS, Avira Rescue System, bitdefender, Checkra1n Linux, Lenovo Diagnostics, Clover, Bliss-OS, Lenovo BIOS Update, Arcabit Rescue Disk, MiyoLinux, TeLOS, Kerio Control, RED OS, OpenWrt, MocaccinoOS, EasyStartup, Pyabr, Refracta, Eset SysRescue, Linpack Xtreme, Archcraft, NHVBOOT, pearOS, SeaTools, Easy Recovery Essentional, iKuai, StorageCraft SCRE, ZFSBootMenu, TROMjaro, BunsenLabs, Todo en Uno, ChallengerOS, Nobara, Holo, CachyOS, Peux OS, Vanilla OS, ShredOS, paladin, Palen1x, dban, ReviOS, HelenOS, XeroLinux, Tiny 11, chimera linux, CuteFish, DragonOs, Rhino Linux, vanilladpup, crystal, IGELOS, MiniOS, gnoppix, PikaOS, UwUntu, Noble, PocketHandyBox, DiskGenius, Commodore, Talos, Shebang Linux, hrmpf, Bazzite, ManualLinux, nyarchlinux, ultramarine, TempleOS, bluefin, Damn Small Linux, Kicksecure, SerentiyOS, AerynOS, ......
+> Capturas reales tomadas arrancando el USB de AstroBoot en QEMU (UEFI y BIOS). Los nombres de ISO del menú son archivos de ejemplo; `memtest86+x64.iso` es una ISO real que arranca.
 
-**Unix**  
-DragonFly, FreeBSD, pfSense, OPNsense, GhostBSD, FreeNAS, TrueNAS, XigmaNAS, FuryBSD, HardenedBSD, MidnightBSD, ClonOS, EmergencyBootKit, helloSystem
+## Cambios respecto a Ventoy
 
-**ChromeOS**  
-FydeOS, CloudReady, ChromeOS Flex, ThoriumOS
+**Aspecto**
+- Tema nuevo al estilo de AstroTune: fondo espacial negro con brillos violeta y rosa, panel de cristal, selección en píldora con degradado `#7a00ff → #d900e6 → #ff0aa0`, barra de desplazamiento rosa y fuentes DejaVu Sans.
+- 52 iconos propios: tipo de imagen (ISO, WIM, IMG, VHD, EFI, carpeta) y cada herramienta.
+- Logo y nombre AstroBoot en el menú, la ayuda, los instaladores y los mensajes.
+- Instalador web de Linux rediseñado en modo oscuro con el mismo degradado.
 
-**Other**  
-VMware ESXi, Citrix XenServer, Xen XCP-ng
+**Más herramientas** (al final del menú principal y dentro de **F5**)
+- **Test de memoria RAM** con Memtest86+ 7 (BIOS y UEFI x64).
+- **Arrancar desde Internet** con netboot.xyz: decenas de sistemas e instaladores sin descargar ISO.
+- **Buscar sistemas operativos instalados**: encuentra Windows, GRUB, shim, systemd-boot y rEFInd en los discos del PC y los arranca.
+- **Información del sistema**: CPU, modo 32/64 bits, RAM, fabricante, Secure Boot, discos y particiones, dispositivos PCI.
+- **Modos de vídeo**, **reiniciar**, **apagar** y **entrar en la configuración UEFI**.
+- **Acerca de AstroBoot**.
 
+**Idioma**
+- Menú en español por defecto (pulsa **L** para cambiarlo; o `VTOY_MENU_LANGUAGE` en `ventoy.json`).
+- Textos nuevos traducidos a español, inglés, portugués, francés, alemán e italiano.
 
-# Tested Image Report
-[【How to report a successfully tested image file】](https://github.com/ventoy/Ventoy/issues/1195)
+**Otros**
+- Scripts renombrados: `AstroBoot2Disk.sh`, `AstroBootWeb.sh`, `AstroBootPlugson.sh`, `AstroBootVlnk.sh`, `AstroBootGUI.*`, `AstroBoot2Disk.exe`.
+- La partición de datos se llama `AstroBoot` al instalar desde Linux.
+- Corregido `sr_RS.json` del menú, al que le faltaba la llave inicial.
 
-# Ventoy Browser
-With Ventoy, you can also browse ISO/WIM/IMG/VHD(x)/EFI files in local disk and boot them. [Notes](https://www.ventoy.net/en/doc_browser.html)
-  
-# VentoyPlugson
-A GUI Ventoy plugin configurator. [VentoyPlugson](https://www.ventoy.net/en/plugin_plugson.html)
+## Teclas del menú
 
-# Features
-* 100% open source
-* Simple to use
-* Fast (limited only by the speed of copying iso file)
-* Can be installed in USB/Local Disk/SSD/NVMe/SD Card
-* Directly boot from ISO/WIM/IMG/VHD(x)/EFI files, no extraction needed
-* Support to browse and boot ISO/WIM/IMG/VHD(x)/EFI files in local disk
-* No need to be continuous in disk for ISO/WIM/IMG/VHD(x)/EFI files
-* MBR and GPT partition style supported (1.0.15+)
-* x86 Legacy BIOS, IA32 UEFI, x86_64 UEFI, ARM64 UEFI, MIPS64EL UEFI supported
-* IA32/x86_64 UEFI Secure Boot supported (1.0.07+)
-* Linux Persistence supported (1.0.11+)
-* Windows auto installation supported (1.0.09+)
-* Linux auto installation supported (1.0.09+)
-* Variables Expansion supported for Windows/Linux auto installation script
-* FAT32/exFAT/NTFS/UDF/XFS/Btrfs/Ext2(3)(4) supported for main partition
-* ISO files larger than 4GB supported
-* Menu alias, Menu tip message supported
-* Password protect supported
-* Native boot menu style for Legacy & UEFI
-* Most types of OS supported, 1300+ iso files tested
-* Linux vDisk boot supported
-* Not only boot but also complete installation process
-* Menu dynamically switchable between List/TreeView mode
-* "Ventoy Compatible" concept
-* Plugin Framework and GUI plugin configurator
-* Injection files to runtime environment
-* Boot configuration file dynamically replacement
-* Highly customizable theme and menu
-* USB drive write-protected support
-* USB normal use unaffected
-* Data nondestructive during version upgrade
-* No need to update Ventoy when a new distro is released
+| Tecla | Acción |
+|---|---|
+| **L** | Idioma |
+| **F1** | Ayuda |
+| **F2** | Explorar discos y arrancar cualquier archivo |
+| **F3** | Vista de lista / árbol |
+| **F4** | Arrancar el disco local (Windows, GRUB…) |
+| **F5** | Herramientas (incluye Herramientas AstroBoot) |
+| **F6** | Menú personalizado (`ventoy/ventoy_grub.cfg`) |
 
-![avatar](https://www.ventoy.net/static/img/screen/screen_uefi.png)
+## Compatibilidad
 
+AstroBoot usa el núcleo de arranque de Ventoy 1.1.18 tal cual, así que arranca lo mismo que Ventoy: más de 1000 ISO probadas, BIOS (Legacy), UEFI x86_64 / IA32 / ARM64, **Secure Boot**, MBR y GPT, exFAT / NTFS / FAT32 / ext4, persistencia, instalación automática y todos los plugins de `ventoy.json`.
 
-# Installation Instructions
-See [https://www.ventoy.net/en/doc_start.html](https://www.ventoy.net/en/doc_start.html) for detailed instructions. 
+- **Actualizar** un USB que ya tiene Ventoy convierte el USB en AstroBoot **sin borrar tus ISO**.
+- Memtest86+ y netboot.xyz no están firmados: con Secure Boot activo puede que el firmware los rechace.
+- El número que muestran los instaladores (1.1.18) es la versión del núcleo de arranque.
 
-# Compile Instructions
-Please refer to [BuildVentoyFromSource.txt](DOC/BuildVentoyFromSource.txt)
+### ¿Por qué sigue apareciendo "ventoy" en algunos sitios?
 
-# Document
-Title | Link
--|-
-**Install & Update** | [https://www.ventoy.net/en/doc_start.html](https://www.ventoy.net/en/doc_start.html)
-**Browse/Boot Files In Local Disk** | [https://www.ventoy.net/en/doc_browser.html](https://www.ventoy.net/en/doc_browser.html)
-**Secure Boot** | [https://www.ventoy.net/en/doc_secure.html](https://www.ventoy.net/en/doc_secure.html)
-**Customize Theme** | [https://www.ventoy.net/en/plugin_theme.html](https://www.ventoy.net/en/plugin_theme.html)  
-**Global Control** | [https://www.ventoy.net/en/plugin_control.html](https://www.ventoy.net/en/plugin_control.html)  
-**Image List** | [https://www.ventoy.net/en/plugin_imagelist.html](https://www.ventoy.net/en/plugin_imagelist.html)  
-**Auto Installation** | [https://www.ventoy.net/en/plugin_autoinstall.html](https://www.ventoy.net/en/plugin_autoinstall.html)  
-**Injection Plugin** | [https://www.ventoy.net/en/plugin_injection.html](https://www.ventoy.net/en/plugin_injection.html)  
-**Persistence Support** | [https://www.ventoy.net/en/plugin_persistence.html](https://www.ventoy.net/en/plugin_persistence.html)  
-**Boot WIM file** | [https://www.ventoy.net/en/plugin_wimboot.html](https://www.ventoy.net/en/plugin_wimboot.html)  
-**Windows VHD Boot** | [https://www.ventoy.net/en/plugin_vhdboot.html](https://www.ventoy.net/en/plugin_vhdboot.html)  
-**Linux vDisk Boot** | [https://www.ventoy.net/en/plugin_vtoyboot.html](https://www.ventoy.net/en/plugin_vtoyboot.html)  
-**DUD Plugin** | [https://www.ventoy.net/en/plugin_dud.html](https://www.ventoy.net/en/plugin_dud.html)  
-**Password Plugin** | [https://www.ventoy.net/en/plugin_password.html](https://www.ventoy.net/en/plugin_password.html)  
-**Conf Replace Plugin** | [https://www.ventoy.net/en/plugin_bootconf_replace.html](https://www.ventoy.net/en/plugin_bootconf_replace.html)  
-**Menu Class** | [https://www.ventoy.net/en/plugin_menuclass.html](https://www.ventoy.net/en/plugin_menuclass.html)  
-**Menu Alias** | [https://www.ventoy.net/en/plugin_menualias.html](https://www.ventoy.net/en/plugin_menualias.html)  
-**Menu Extension** | [https://www.ventoy.net/en/plugin_grubmenu.html](https://www.ventoy.net/en/plugin_grubmenu.html)  
-**Memdisk Mode** | [https://www.ventoy.net/en/doc_memdisk.html](https://www.ventoy.net/en/doc_memdisk.html)  
-**TreeView Mode** | [https://www.ventoy.net/en/doc_treeview.html](https://www.ventoy.net/en/doc_treeview.html)  
-**Disk Layout MBR** | [https://www.ventoy.net/en/doc_disk_layout.html](https://www.ventoy.net/en/doc_disk_layout.html)  
-**Disk Layout GPT** | [https://www.ventoy.net/en/doc_disk_layout_gpt.html](https://www.ventoy.net/en/doc_disk_layout_gpt.html)  
-**Search Configuration** | [https://www.ventoy.net/en/doc_search_path.html](https://www.ventoy.net/en/doc_search_path.html)
+Solo donde es obligatorio para que funcione:
+- La partición de arranque se llama `VTOYEFI` y la carpeta de configuración del USB `ventoy/` (con `ventoy.json`). El núcleo las busca por ese nombre.
+- La línea pequeña de créditos de la esquina ("`1.1.18 UEFI  www.ventoy.net`") la dibuja el binario GRUB **firmado**. Quitarla exige recompilar GRUB y perder la firma de Secure Boot, así que AstroBoot la deja como crédito, solo que más discreta y con sus colores.
+- Los ejecutables gráficos de Windows/Linux son los oficiales (también para no romper firmas); sus textos salen de `languages.json`, que ya dice AstroBoot.
 
+## Compilar
 
-# FAQ
-See [https://www.ventoy.net/en/faq.html](https://www.ventoy.net/en/faq.html) for detail
+```bash
+sudo apt install mtools dosfstools xz-utils zip unzip
+bash astroboot/build.sh
+```
 
+Los paquetes quedan en `astroboot/out/`. El script descarga la release oficial de Ventoy 1.1.18, comprueba su SHA-256, toma de ella los binarios firmados y reconstruye la partición `VTOYEFI` con el menú, el tema, las traducciones, los scripts y las herramientas de este repositorio.
 
-# Forum
-[https://forums.ventoy.net](https://forums.ventoy.net)
+GitHub Actions compila en cada push y, al subir una etiqueta `v*`, publica la release con los paquetes y `SHA256SUMS.txt`.
 
-# Donation
-It would be much appreciated if you want to make a small donation to support my work!  
-Alipay, WeChat Pay, PayPal and Bitcoin are available for donation. You can choose any of them.  
+| Ruta | Contenido |
+|---|---|
+| `INSTALL/grub/astroboot.cfg` | Menú Herramientas AstroBoot |
+| `INSTALL/grub/themes/astroboot/` | Tema GRUB (generado con `astroboot/branding/make_theme.py`) |
+| `INSTALL/grub/grub.cfg` | Configuración principal (versión, tema, idioma, créditos) |
+| `LinuxGUI/WebUI/static/css/astroboot.css` | Estilo del instalador web |
+| `astroboot/tools/` | Memtest86+ y netboot.xyz |
+| `astroboot/scripts/rebrand_menu_lang.py` | Traducciones y cambio de marca del menú |
 
-Alipay | WeChat Pay
--|-
-<img src="https://www.ventoy.net/static/img/AliPay.png" width="250" height="250">|<img src="https://www.ventoy.net/static/img/WeChatPay.png" width="250" height="250">
+El código fuente completo de Ventoy (GRUB2, EDK2, iPXE, instaladores…) está en el repositorio. El método de compilación completo original sigue en [`DOC/BuildVentoyFromSource.txt`](DOC/BuildVentoyFromSource.txt).
 
-**PayPal**  
-You can transfer to my paypal account `admin@ventoy.net` or just click [https://www.paypal.me/ventoy](https://www.paypal.me/ventoy)  
+## Licencia
 
-**Bitcoin**  
-Bitcoin Address `19mZDWzZgzkHCi9YX9H3fYCUuCHq3W6wfT`
-
-
-
-
-
-
-
-
+GPL-3.0, igual que Ventoy. Cada componente conserva su licencia (ver `License/` y `THIRD_PARTY_NOTICES.md`).

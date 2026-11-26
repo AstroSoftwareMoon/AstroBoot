@@ -1,0 +1,106 @@
+desktop-image: "background.png"
+title-text: " "
+title-color: "#ffffff"
+message-color: "#f2f2f3"
+
+terminal-box: "terminal_box_*.png"
+
++ boot_menu {
+  left = 7%
+  width = 86%
+  top = 22%+4
+  height = 62%+4
+
+  menu_pixmap_style = "menu_*.png"
+
+  item_font = "DejaVu Sans Regular 16"
+  selected_item_font = "DejaVu Sans Bold 16"
+  item_color = "#d8d8de"
+  item_height = 32
+
+  item_spacing = 3
+  item_padding = 2
+
+  selected_item_color= "#ffffff"
+  selected_item_pixmap_style = "select_*.png"
+
+  icon_width = 22
+  icon_height = 22
+  item_icon_space = 12
+
+  scrollbar = true
+  scrollbar_width = 6
+  scrollbar_frame = "scroll_*.png"
+  scrollbar_thumb = "slider_*.png"
+}
+
+
+
++ progress_bar {
+  id = "__timeout__"
+  text = "@TIMEOUT_NOTIFICATION_SHORT@"
+
+  left = 66%
+  width = 28%+5
+  top = 11%
+
+  text_color = "#ff0aa0"
+  bar_style = "*"
+  highlight_style = "*"
+}
+
++ hbox{ 
+    left = 5%+5
+    top = 92%
+    width = 10%
+    height = 25
+    + label {text = "@VTOY_HOTKEY_TIP@" color = "#b98cff" align = "left"} 
+}
+
++ hbox{ 
+    left = 5%+5
+    top = 92%-28
+    width = 10%
+    height = 25
+    + label {text = "@VTOY_MEM_DISK@" color = "#ff0aa0" align = "left"} 
+}
+
++ hbox{ 
+    left = 22%
+    top = 92%-28
+    width = 10%
+    height = 25
+    + label {text = "@VTOY_ISO_RAW@" color = "#ff0aa0" align = "left"} 
+}
+
++ hbox{ 
+    left = 42%
+    top = 92%-28
+    width = 10%
+    height = 25
+    + label {text = "@VTOY_GRUB2_MODE@" color = "#ff0aa0" align = "left"} 
+}
+
++ hbox{ 
+    left = 62%
+    top = 92%-28
+    width = 10%
+    height = 25
+    + label {text = "@VTOY_WIMBOOT_MODE@" color = "#ff0aa0" align = "left"} 
+}
+
++ hbox{ 
+    left = 84%
+    top = 15%+4
+    width = 10%
+    height = 25
+    + label {text = "@VTOY_ISO_UEFI_DRV@" color = "#ff0aa0" align = "left"} 
+}
+
++ hbox{ 
+    left = 78%
+    top = 6%
+    width = 10%
+    height = 25
+    + label {text = "@@ASTROBOOT_FOOTER" color = "#8e8e93" align = "left"} 
+}
