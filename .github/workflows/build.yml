@@ -11,13 +11,42 @@ permissions:
   contents: write
 
 jobs:
+  windows-installer:
+    name: AstroBoot2Disk.exe (MSVC)
+    runs-on: windows-2022
+    steps:
+      - uses: actions/checkout@v4
+      - uses: microsoft/setup-msbuild@v2
+      - name: Build Win32 / x64 / ARM64
+        shell: pwsh
+        run: |
+          foreach ($p in @('Win32','x64','ARM64')) {
+            msbuild Ventoy2Disk\Ventoy2Disk.sln /t:Build /m /p:Configuration=Release /p:Platform=$p /p:PlatformToolset=v143
+            if ($LASTEXITCODE -ne 0) { exit 1 }
+          }
+          New-Item -ItemType Directory -Force winbin | Out-Null
+          Get-ChildItem -Recurse Ventoy2Disk -Filter 'Ventoy2Disk*.exe' | Where-Object { $_.FullName -match 'Release' } |
+            ForEach-Object { Copy-Item $_.FullName winbin\ ; Write-Host $_.FullName }
+          Get-ChildItem winbin
+      - uses: actions/upload-artifact@v4
+        with:
+          name: winbin
+          path: winbin/*.exe
+
   build:
+    name: Packages
+    needs: windows-installer
     runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v4
 
       - name: Install build tools
         run: sudo apt-get update -q && sudo apt-get install -y -q mtools dosfstools xz-utils zip unzip
+
+      - uses: actions/download-artifact@v4
+        with:
+          name: winbin
+          path: astroboot/winbin
 
       - name: Build packages
         run: bash astroboot/build.sh
@@ -39,5 +68,43 @@ jobs:
           TAG="v$VER"
           if ! gh release view "$TAG" >/dev/null 2>&1; then
             gh release create "$TAG" --target "$GITHUB_SHA" --title "AstroBoot $VER" --notes-file astroboot/RELEASE_NOTES.md
+          else
+            gh release edit "$TAG" --notes-file astroboot/RELEASE_NOTES.md
           fi
           gh release upload "$TAG" astroboot/out/*.tar.gz astroboot/out/*.zip astroboot/out/SHA256SUMS.txt --clobber
+
+  screenshot:
+    name: Installer screenshot (Windows)
+    needs: build
+    if: github.event_name != 'pull_request'
+    runs-on: windows-2022
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          name: astroboot-packages
+          path: pkg
+      - name: Run AstroBoot2Disk.exe and capture it
+        shell: pwsh
+        run: |
+          $zip = Get-ChildItem pkg -Filter 'astroboot-*-windows.zip' | Select-Object -First 1
+          Expand-Archive $zip.FullName -DestinationPath run
+          $dir = Get-ChildItem run -Directory | Select-Object -First 1
+          $p = Start-Process -FilePath (Join-Path $dir.FullName 'AstroBoot2Disk.exe') -WorkingDirectory $dir.FullName -PassThru
+          Start-Sleep -Seconds 12
+          Add-Type -AssemblyName System.Windows.Forms, System.Drawing
+          $b = [System.Windows.Forms.Screen]::PrimaryScreen.Bounds
+          $bmp = New-Object System.Drawing.Bitmap $b.Width, $b.Height
+          $g = [System.Drawing.Graphics]::FromImage($bmp)
+          $g.CopyFromScreen($b.Location, [System.Drawing.Point]::Empty, $b.Size)
+          New-Item -ItemType Directory -Force shots | Out-Null
+          $bmp.Save("$PWD\shots\windows-installer-screen.png", [System.Drawing.Imaging.ImageFormat]::Png)
+          Get-Content (Join-Path $dir.FullName 'log.txt') -ErrorAction SilentlyContinue | Select-Object -Last 40 | Set-Content shots\log.txt
+          if (-not $p.HasExited) { Stop-Process -Id $p.Id -Force }
+      - name: Push screenshot to the ci-screenshots branch
+        shell: bash
+        run: |
+          cd shots
+          git init -q && git checkout -q -b ci-screenshots
+          git config user.name "github-actions" && git config user.email "github-actions@users.noreply.github.com"
+          git add -A && git commit -q -m "Installer screenshot for ${GITHUB_SHA}"
+          git push -f "https://x-access-token:${{ github.token }}@github.com/${GITHUB_REPOSITORY}.git" ci-screenshots

@@ -1,7 +1,7 @@
 [
     {
         "name":"Arabic (العربية)",        
-        "FontFamily":"Courier New",
+        "FontFamily":"Segoe UI",
         "FontSize":20,
         "Author":"Omar Namis Mostafa",
         
@@ -131,7 +131,7 @@
     },
     {
         "name":"Azerbaijani (Azərbaycanca)",
-        "FontFamily":"Courier New",
+        "FontFamily":"Segoe UI",
         "FontSize":16,
         "Author":"Xəyyam Qocayev",
         
@@ -196,7 +196,7 @@
     },
     {
         "name":"Korean (한국어)",
-        "FontFamily":"Courier New",
+        "FontFamily":"Segoe UI",
         "FontSize":16,
         "Author":"VenusGirl, HYB1022",
         
@@ -326,7 +326,7 @@
     },
     {
         "name":"Danish (Dansk)",
-        "FontFamily":"Courier New",
+        "FontFamily":"Segoe UI",
         "FontSize":16,
         "Author":"fhdk",
 
@@ -391,7 +391,7 @@
     },
     {
         "name":"English (English)",
-        "FontFamily":"Courier New",
+        "FontFamily":"Segoe UI",
         "FontSize":16,
         "Author":"longpanda",
         
@@ -521,7 +521,7 @@
     },
     {
         "name":"Persian (فارسی)",
-        "FontFamily":"Courier New",
+        "FontFamily":"Segoe UI",
         "FontSize":16,
         "Author":"ivadham",
         
@@ -586,7 +586,7 @@
     },
     {
         "name":"Polish (Polski)",
-        "FontFamily":"Courier New",
+        "FontFamily":"Segoe UI",
         "FontSize":16,
         "Author":"B.O.S.S, ChuckMichael",
         
@@ -651,7 +651,7 @@
     },
     {
         "name":"Portuguese Brazilian (Português Brasileiro)",
-        "FontFamily":"Courier New",
+        "FontFamily":"Segoe UI",
         "FontSize":16,
         "Author":"EstevaoCostaG3, David BrazSan, Hildo Guillardi Júnior, Chrystian Rubio, Felipe",
         
@@ -716,7 +716,7 @@
     },
 	{
         "name":"Slovenian (Slovenščina)",
-        "FontFamily":"Courier New",
+        "FontFamily":"Segoe UI",
         "FontSize":16,
         "Author":"Andrew Poženel, Urajmal",
         
@@ -781,7 +781,7 @@
     },
     {
         "name":"Turkish (Türkçe)",
-        "FontFamily":"Courier New",
+        "FontFamily":"Segoe UI",
         "FontSize":16,
         "Author":"Erhan Kültür,Tayfun Akkoyun, Oğuz Ersen",
         
@@ -846,7 +846,7 @@
     },
     {
         "name":"German (Deutsch)",
-        "FontFamily":"Courier New",
+        "FontFamily":"Segoe UI",
         "FontSize":16,
         "Author":"luzea & u!^DEV, wiz64",
         
@@ -911,7 +911,7 @@
     },
     {
         "name":"Occitan (Occitan)",
-        "FontFamily":"Courier New",
+        "FontFamily":"Segoe UI",
         "FontSize":16,
         "Author":"quentin",
         
@@ -976,7 +976,7 @@
     },
     {
         "name":"French (Français)",
-        "FontFamily":"Courier New",
+        "FontFamily":"Segoe UI",
         "FontSize":16,
         "Author":"vboucard, Silejonu, wiz64",
         
@@ -1041,7 +1041,7 @@
     },
     {
         "name":"Czech (Čeština)",
-        "FontFamily":"Courier New",
+        "FontFamily":"Segoe UI",
         "FontSize":16,
         "Author":"vavanade, lev741",
         
@@ -1106,7 +1106,7 @@
     },
     {
         "name":"Slovak (Slovenčina)",
-        "FontFamily":"Courier New",
+        "FontFamily":"Segoe UI",
         "FontSize":16,
         "Author":"reggiiie/jose1711",
 
@@ -1170,7 +1170,7 @@
     },
     {
         "name":"Spanish (Latinoamérica)",
-        "FontFamily":"Courier New",
+        "FontFamily":"Segoe UI",
         "FontSize":16,
         "Author":"MELERIX, independent-arg",
         
@@ -1235,7 +1235,7 @@
     },
     {
         "name":"Spanish (España)",
-        "FontFamily":"Courier New",
+        "FontFamily":"Segoe UI",
         "FontSize":16,
         "Author":"Carlos Sánchez, MELERIX, shulkalala",
         
@@ -1300,7 +1300,7 @@
     },
     {
         "name":"Russian (Русский)",
-        "FontFamily":"Courier New",
+        "FontFamily":"Segoe UI",
         "FontSize":16,
         "Author":"Dmitry Yerokhin, BL4CKH47H4CK3R, Teraskull, thehugonote, wiz64, dmitrygribenchuk, Темак",
         
@@ -1365,7 +1365,7 @@
     },
     {
         "name":"Bengali (বাংলা)",
-        "FontFamily":"Courier New",
+        "FontFamily":"Segoe UI",
         "FontSize":16,
         "Author":"BL4CKH47H4CK3R, wiz64",
         
@@ -1430,7 +1430,7 @@
     },
     {
         "name":"Hindi (हिन्दी)",
-        "FontFamily":"Courier New",
+        "FontFamily":"Segoe UI",
         "FontSize":16,
         "Author":"BL4CKH47H4CK3R, wiz64",
         
@@ -1495,7 +1495,7 @@
     },
     {
         "name":"Dutch (Nederlands)",
-        "FontFamily":"Courier New",
+        "FontFamily":"Segoe UI",
         "FontSize":16,
         "Author":"UmitCanbolat, RockyTDR",
         
@@ -1560,7 +1560,7 @@
     },
     {
         "name":"Romanian (Română)",
-        "FontFamily":"Courier New",
+        "FontFamily":"Segoe UI",
         "FontSize":16,
         "Author":"DorinMol, cezarlacatus, wiz64",
         
@@ -1690,7 +1690,7 @@
     },
     {
         "name":"Italian (Italiano)",
-        "FontFamily":"Courier New",
+        "FontFamily":"Segoe UI",
         "FontSize":16,
         "Author":"AverageUser2,Albano Battistella,bovirus,passero",
         
@@ -1755,7 +1755,7 @@
     },
     {
         "name":"Croatian (Hrvatski)",
-        "FontFamily":"Courier New",
+        "FontFamily":"Segoe UI",
         "FontSize":16,
         "Author":"Valnjes",
         
@@ -1820,7 +1820,7 @@
     },
     {
         "name":"Hungarian (Magyar)",
-        "FontFamily":"Courier New",
+        "FontFamily":"Segoe UI",
         "FontSize":16,
         "Author":"Bitfarago, gidano, meskobalazs",
         
@@ -1950,7 +1950,7 @@
     },
     {
         "name":"Serbian Latin (Srpski)",
-        "FontFamily":"Courier New",
+        "FontFamily":"Segoe UI",
         "FontSize":16,
         "Author":"Bojan Maksimović, panickingkernel, Zoran Jankov, Stefan Šućur, Kosta Stojiljković",
         
@@ -2015,7 +2015,7 @@
     },
     {
         "name":"Serbian Cyrillic (Српски)",
-        "FontFamily":"Courier New",
+        "FontFamily":"Segoe UI",
         "FontSize":16,
         "Author":"Bojan Maksimović, panickingkernel, Zoran Jankov, Stefan Šućur, Kosta Stojiljković",
 
@@ -2080,7 +2080,7 @@
     },
     {
         "name":"Thai (ไทย)",
-        "FontFamily":"Courier New",
+        "FontFamily":"Segoe UI",
         "FontSize":17,
         "Author":"longpanda",
         
@@ -2145,7 +2145,7 @@
     },
     {
         "name":"Norwegian (Norsk)",
-        "FontFamily":"Courier New",
+        "FontFamily":"Segoe UI",
         "FontSize":16,
         "Author":"Stein-Ove Bøthun",
 
@@ -2275,7 +2275,7 @@
     },
     {
         "name":"Lithuanian (Lietuvių)",
-        "FontFamily":"Courier New",
+        "FontFamily":"Segoe UI",
         "FontSize":16,
         "Author":"r0manas",
         
@@ -2340,7 +2340,7 @@
     },
     {
         "name":"Macedonian (Македонски)",
-        "FontFamily":"Courier New",
+        "FontFamily":"Segoe UI",
         "FontSize":16,
         "Author":"Влатко Стојанов",
         
@@ -2470,7 +2470,7 @@
     },
     {
         "name":"Portuguese (Português de Portugal)",
-        "FontFamily":"Courier New",
+        "FontFamily":"Segoe UI",
         "FontSize":16,
         "Author":"Eskiso, Hugo Carvalho",
         
@@ -2535,7 +2535,7 @@
     },
     {
         "name":"Indonesian (Bahasa Indonesia)",
-        "FontFamily":"Courier New",
+        "FontFamily":"Segoe UI",
         "FontSize":16,
         "Author":"Ida Bagus Anom Sanjaya",
         
@@ -2600,7 +2600,7 @@
     },
     {
         "name":"Norwegian Bokmål (Norsk Bokmål)",
-        "FontFamily":"Courier New",
+        "FontFamily":"Segoe UI",
         "FontSize":16,
         "Author":"Allan Nordhøy",
         
@@ -2665,7 +2665,7 @@
     },
     {
         "name":"Ukrainian (Українська)",
-        "FontFamily":"Courier New",
+        "FontFamily":"Segoe UI",
         "FontSize":16,
         "Author":"Teraskull, thehugonote, dmitrygribenchuk",
 
@@ -2730,7 +2730,7 @@
     },
     {
         "name":"Greek (Ελληνικά)",
-        "FontFamily":"Courier New",
+        "FontFamily":"Segoe UI",
         "FontSize":16,
         "Author":"grmasa, Vasilis Kosmidis",
         
@@ -2796,7 +2796,7 @@
     
     {
         "name":"Swedish (Svenska)",
-        "FontFamily":"Courier New",
+        "FontFamily":"Segoe UI",
         "FontSize":16,
         "Author":"Sopor",
         
@@ -2926,7 +2926,7 @@
     },
     {
         "name":"Armenian (Հայերեն)",
-        "FontFamily":"Courier New",
+        "FontFamily":"Segoe UI",
         "FontSize":16,
         "Author":"Egho",
 
@@ -2991,7 +2991,7 @@
     },
     {
         "name":"Finnish (suomi)",
-        "FontFamily":"Courier New",
+        "FontFamily":"Segoe UI",
         "FontSize":16,
         "Author":"heidi.wenger",
 
@@ -3056,7 +3056,7 @@
     },
     {
         "name":"Galician (Galego)",
-        "FontFamily":"Courier New",
+        "FontFamily":"Segoe UI",
         "FontSize":16,
         "Author":"gbrea",
         
@@ -3121,7 +3121,7 @@
     },
     {
         "name":"Catalan (Català)",
-        "FontFamily":"Courier New",
+        "FontFamily":"Segoe UI",
         "FontSize":16,
         "Author":"guillemglez",
         
@@ -3187,7 +3187,7 @@
     
     {
         "name":"Georgian (ქართული)",
-        "FontFamily":"Courier New",
+        "FontFamily":"Segoe UI",
         "FontSize":16,
         "Author":"Levan Baindurashvili",
         
@@ -3252,7 +3252,7 @@
     },
     {
         "name":"Tamil (தமிழ்)",
-        "FontFamily":"Courier New",
+        "FontFamily":"Segoe UI",
         "FontSize":16,
         "Author":"K.B.Dharun Krishna",
         
@@ -3317,7 +3317,7 @@
     },
     {
         "name":"Belarussian (Беларуская)",
-        "FontFamily":"Courier New",
+        "FontFamily":"Segoe UI",
         "FontSize":16,
         "Author": "dmitrygribenchuk",
 
@@ -3382,7 +3382,7 @@
     },
     {
         "name":"Malayalam (മലയാളം)",
-        "FontFamily":"Courier New",
+        "FontFamily":"Segoe UI",
         "FontSize":16,
         "Author":"SIDDHARTH K P",
 

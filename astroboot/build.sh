@@ -167,12 +167,26 @@ log "assemble $NAME-windows.zip"
 Wd=$WORK/windows/$NAME
 mkdir -p "$Wd/ventoy" "$Wd/altexe"
 cp -a "$UPW/boot" "$UPW/plugin" "$Wd/"
-cp "$UPW/Ventoy2Disk.exe"   "$Wd/AstroBoot2Disk.exe"
+# AstroBoot2Disk.exe: rebuilt from Ventoy2Disk/ with the AstroBoot look when the
+# CI (or you) put the MSVC binaries in astroboot/winbin; upstream binary otherwise.
+WB=$SELF/winbin
+if [ -f "$WB/Ventoy2Disk.exe" ]; then
+    log "using AstroBoot2Disk built from source ($WB)"
+    cp "$WB/Ventoy2Disk.exe" "$Wd/AstroBoot2Disk.exe"
+else
+    log "WARNING: astroboot/winbin missing, using the upstream Ventoy2Disk.exe"
+    cp "$UPW/Ventoy2Disk.exe" "$Wd/AstroBoot2Disk.exe"
+fi
 cp "$UPW/VentoyPlugson.exe" "$Wd/AstroBootPlugson.exe"
 cp "$UPW/VentoyVlnk.exe"    "$Wd/AstroBootVlnk.exe"
 cp "$UPW/FOR_X64_ARM.txt"   "$Wd/"
 for f in "$UPW"/altexe/*.exe; do
-    b=$(basename "$f"); cp "$f" "$Wd/altexe/${b/Ventoy/AstroBoot}"
+    b=$(basename "$f")
+    if [ -f "$WB/$b" ]; then
+        cp "$WB/$b" "$Wd/altexe/${b/Ventoy/AstroBoot}"
+    else
+        cp "$f" "$Wd/altexe/${b/Ventoy/AstroBoot}"
+    fi
 done
 cp "$L/ventoy/ventoy.disk.img.xz" "$L/ventoy/ventoy_4k.disk.img.xz" "$L/ventoy/version" \
    "$L/ventoy/astroboot_version" "$Wd/ventoy/"
