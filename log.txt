@@ -1,0 +1,40 @@
+[2026/11/27 09:26:17.738] Exe file path <D:\a\AstroBoot\AstroBoot\run\astroboot-1.0.2\AstroBoot2Disk.exe>
+[2026/11/27 09:26:17.738] Current directory check OK.
+[2026/11/27 09:26:17.738] Current directory:<D:\a\AstroBoot\AstroBoot\run\astroboot-1.0.2>
+[2026/11/27 09:26:17.738] ######### Current Ventoy Version: Ventoy2DiskX86 1.1.18 ########
+[2026/11/27 09:26:17.753] id=6952/1144
+[2026/11/27 09:26:17.753] PPath:<C:\Program Files\PowerShell\7\pwsh.exe>
+[2026/11/27 09:26:17.753] PSize:<301384 294KB>
+[2026/11/27 09:26:17.753] Lunch main process 0
+[2026/11/27 09:26:17.753] Control Flag: 0 1 1
+[2026/11/27 09:26:17.753] Windows Version: <<Windows Server 2022 Server Datacenter, 64-bit (Build 20348.5870)>>
+[2026/11/27 09:26:17.753] 
+===================== Enum All PhyDrives =====================
+[2026/11/27 09:26:17.753] RegOpenKeyExA <SYSTEM\CurrentControlSet\Services\disk\Enum> Ret:0
+[2026/11/27 09:26:17.753] RegQueryValueExA <Count> ret:0  Size:4 Value:2
+[2026/11/27 09:26:17.753] GetPhysicalDriveCount: 2
+[2026/11/27 09:26:17.753] Logical Drives: 0xc
+[2026/11/27 09:26:17.753] LogicalDrive:\\.\C: PhyDrive:0 Num:1 Offset:593494016 ExtentLength:274284396032
+[2026/11/27 09:26:17.753] C --> 0
+[2026/11/27 09:26:17.753] LogicalDrive:\\.\D: PhyDrive:1 Num:1 Offset:16777216 ExtentLength:236205375488
+[2026/11/27 09:26:17.753] D --> 1
+[2026/11/27 09:26:17.753] Create file Handle:00000130 \\.\PhysicalDrive0 status:0
+[2026/11/27 09:26:17.753] PHYSICALDRIVE0 size 274877906944 bytes
+[2026/11/27 09:26:17.753] Create file Handle:00000138 \\.\PhysicalDrive1 status:0
+[2026/11/27 09:26:17.753] PHYSICALDRIVE1 size 236223201280 bytes
+[2026/11/27 09:26:17.753] PhyDrv:0 BusType:Nvme Removable:0 Size:256GB(274877906944) Sector:512/4096 Name: Virtual_Disk NVME Premium
+[2026/11/27 09:26:17.753] PhyDrv:1 BusType:Nvme Removable:0 Size:220GB(236223201280) Sector:512/4096 Name: Microsoft NVMe Direct Disk v2
+[2026/11/27 09:26:17.753] LogicalDrive:\\.\C: PhyDrive:0 Num:1 Offset:593494016 ExtentLength:274284396032
+[2026/11/27 09:26:17.753] Logical Drive:C  ===> PhyDrive:0
+[2026/11/27 09:26:17.753] LogicalDrive:\\.\D: PhyDrive:1 Num:1 Offset:16777216 ExtentLength:236205375488
+[2026/11/27 09:26:17.753] Logical Drive:D  ===> PhyDrive:1
+[2026/11/27 09:26:17.753] < Virtual_Disk NVME Premium> is filtered for not USB type.
+[2026/11/27 09:26:17.753] < Microsoft NVMe Direct Disk v2> is filtered for not USB type.
+[2026/11/27 09:26:18.394] Load languages from json file ...
+[2026/11/27 09:26:18.394] language json file len:295027 json parse:0
+[2026/11/27 09:26:18.394] Total 53 languages ...
+[2026/11/27 09:26:18.848] Courier New font <C:\Windows\Fonts\couri.ttf> exist OK.
+[2026/11/27 09:26:18.848] system_dir=<C:\Windows\system32>
+[2026/11/27 09:26:18.848] sysnative_dir=<C:\Windows\Sysnative>
+[2026/11/27 09:26:18.848] LoadLibrary shell32.dll.mui SUCCESS
+[2026/11/27 09:26:18.848] SetAlertPromptHook SUCCESS
