@@ -86,5 +86,7 @@
     "VTLANG_ASTRO_ABOUT": "Über AstroBoot",
     "VTLANG_ASTRO_SB_NOTE": "Secure Boot ist aktiv: dieses Werkzeug ist nicht signiert und kann abgelehnt werden. Secure Boot deaktivieren, falls es nicht startet.",
     "VTLANG_ASTRO_ONLY_X64": "Dieses Werkzeug ist nur auf x86/x64-PCs verfügbar.",
+    "VTLANG_ASTRO_NETBOOT_COMPAT": "Aus dem Internet starten - Kompatibilitätsmodus (falls kein Netzwerk gefunden wird)",
+    "VTLANG_ASTRO_NETBOOT_COMPAT_NOTE": "Der Kompatibilitätsmodus nutzt eigene Treiber: auf manchen PCs reagiert die USB-Tastatur nicht mehr. Dann den Countdown abwarten oder den Netzschalter gedrückt halten.",
     "MENU_STR_XXX": ""
 }

@@ -16,7 +16,7 @@ Herramientas añadidas por AstroBoot (`astroboot/tools/`):
 | Herramienta | Versión | Licencia | Origen |
 |---|---|---|---|
 | Memtest86+ (`memtest86+x64.bin/.efi`) | 7.00 | GPL-2.0 | https://memtest.org (paquete `memtest86+` de Ubuntu 24.04) |
-| netboot.xyz (`netboot.xyz.efi/.lkrn`) | 3.0.3 (iPXE 2.0.0+) | GPL-2.0 | https://github.com/netbootxyz/netboot.xyz |
+| netboot.xyz (`netboot.xyz-snp.efi`, `netboot.xyz.efi`, `netboot.xyz.lkrn`) | 3.0.3 (iPXE 2.0.0+) | GPL-2.0 | https://github.com/netbootxyz/netboot.xyz |
 
 Fuentes del tema: DejaVu Sans (licencia Bitstream Vera / dominio público).
 Iconos, fondo y logo del tema AstroBoot: creados para este proyecto

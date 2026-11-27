@@ -1,8 +1,16 @@
-## AstroBoot 1.0.1 · logos de AstroBoot en todas partes
+## AstroBoot 1.0.2 · netboot.xyz con teclado USB
+
+**Corregido en 1.0.2**
+- **netboot.xyz y el teclado USB**: en algunas placas (p. ej. ASUS) el menú de netboot.xyz no respondía al teclado y solo avanzaba la cuenta atrás. "Arrancar desde Internet" usa ahora la versión SNP de netboot.xyz, que trabaja con los drivers de red de la placa y no toma los controladores USB, que es la causa conocida de ese bloqueo.
+- Nueva entrada **"Arrancar desde Internet - modo compatibilidad"** con la versión completa, para PCs cuya BIOS no expone la tarjeta de red en UEFI (opción "Network Stack" desactivada).
+
+---
+
+### Incluye todo lo de 1.0.1 · logos de AstroBoot en todas partes
 
 **Descargas**
-- `astroboot-1.0.1-windows.zip` → descomprime y ejecuta `AstroBoot2Disk.exe`
-- `astroboot-1.0.1-linux.tar.gz` → `./AstroBootGUI.x86_64`, `sudo sh AstroBootWeb.sh` o `sudo sh AstroBoot2Disk.sh -i /dev/sdX`
+- `astroboot-1.0.2-windows.zip` → descomprime y ejecuta `AstroBoot2Disk.exe`
+- `astroboot-1.0.2-linux.tar.gz` → `./AstroBootGUI.x86_64`, `sudo sh AstroBootWeb.sh` o `sudo sh AstroBoot2Disk.sh -i /dev/sdX`
 
 **Novedades en 1.0.1**
 - **Instalador de Windows nuevo** (`AstroBoot2Disk.exe`), recompilado desde el código fuente: tema oscuro AstroBoot, cabecera con el logo, tarjetas, botón Instalar con degradado violeta→rosa, barra de título y menús oscuros, fuente Segoe UI.

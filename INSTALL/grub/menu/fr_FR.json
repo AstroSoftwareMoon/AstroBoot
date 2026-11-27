@@ -86,5 +86,7 @@
     "VTLANG_ASTRO_ABOUT": "À propos d'AstroBoot",
     "VTLANG_ASTRO_SB_NOTE": "Secure Boot est actif : cet outil n'est pas signé et peut être refusé. Désactivez Secure Boot s'il ne démarre pas.",
     "VTLANG_ASTRO_ONLY_X64": "Cet outil n'est disponible que sur les PC x86/x64.",
+    "VTLANG_ASTRO_NETBOOT_COMPAT": "Démarrer depuis Internet - mode compatibilité (si aucun réseau n'est trouvé)",
+    "VTLANG_ASTRO_NETBOOT_COMPAT_NOTE": "Le mode compatibilité utilise ses propres pilotes : sur certains PC le clavier USB ne répond plus. Dans ce cas, attendez le compte à rebours ou maintenez le bouton d'alimentation.",
     "MENU_STR_XXX": ""
 }

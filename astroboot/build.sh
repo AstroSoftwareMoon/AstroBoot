@@ -109,7 +109,7 @@ cp "$ROOT/INSTALL/grub/menulang.cfg" "$G/menulang.cfg"
 log "add AstroBoot tools"
 mkdir -p "$EFI/astroboot"
 cp "$SELF"/tools/memtest86+x64.bin "$SELF"/tools/memtest86+x64.efi \
-   "$SELF"/tools/netboot.xyz.efi "$SELF"/tools/netboot.xyz.lkrn "$EFI/astroboot/"
+   "$SELF"/tools/netboot.xyz.efi "$SELF"/tools/netboot.xyz-snp.efi "$SELF"/tools/netboot.xyz.lkrn "$EFI/astroboot/"
 echo "$VER" > "$EFI/astroboot/version"
 
 #------------------------------------------------------- new 32MB FAT image ---

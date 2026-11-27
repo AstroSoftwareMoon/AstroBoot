@@ -14,8 +14,8 @@ Ve a **[Releases](https://github.com/AstroSoftwareMoon/AstroBoot/releases/latest
 
 | Sistema | Archivo | Cómo usarlo |
 |---|---|---|
-| Windows | `astroboot-1.0.1-windows.zip` | Descomprime y ejecuta `AstroBoot2Disk.exe` |
-| Linux | `astroboot-1.0.1-linux.tar.gz` | `sudo sh AstroBootWeb.sh` (interfaz web) o `sudo sh AstroBoot2Disk.sh -i /dev/sdX` |
+| Windows | `astroboot-1.0.2-windows.zip` | Descomprime y ejecuta `AstroBoot2Disk.exe` |
+| Linux | `astroboot-1.0.2-linux.tar.gz` | `sudo sh AstroBootWeb.sh` (interfaz web) o `sudo sh AstroBoot2Disk.sh -i /dev/sdX` |
 
 Después, copia tus archivos `.iso`, `.wim`, `.img`, `.vhd(x)` o `.efi` a la partición **AstroBoot** del USB, en las carpetas que quieras.
 

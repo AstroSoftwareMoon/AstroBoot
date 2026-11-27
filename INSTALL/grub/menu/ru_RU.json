@@ -86,5 +86,7 @@
     "VTLANG_ASTRO_ABOUT": "About AstroBoot",
     "VTLANG_ASTRO_SB_NOTE": "Secure Boot is on: this tool is not signed and may be refused. Turn Secure Boot off if it does not start.",
     "VTLANG_ASTRO_ONLY_X64": "This tool is only available on x86/x64 PCs.",
+    "VTLANG_ASTRO_NETBOOT_COMPAT": "Boot from the Internet - compatibility mode (if no network is found)",
+    "VTLANG_ASTRO_NETBOOT_COMPAT_NOTE": "Compatibility mode uses its own drivers: on some PCs the USB keyboard stops working. If so, wait for the countdown or hold the power button.",
     "MENU_STR_XXX": ""
 }
