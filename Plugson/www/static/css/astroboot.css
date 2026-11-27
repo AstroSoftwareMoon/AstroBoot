@@ -1,0 +1,26 @@
+/* AstroBoot look for Plugson (AstroTune family colours) */
+.skin-blue .main-header .navbar, .skin-blue .main-header .logo,
+.skin-blue .main-header .logo:hover, .skin-blue .main-header .navbar .sidebar-toggle:hover {
+  background-color: #121115 !important; border-bottom: 1px solid #2c2c2e;
+}
+.skin-blue .main-header .logo { color: #fff !important; font-weight: 700; }
+.skin-blue .main-header .navbar .nav > li > a { color: #b98cff !important; }
+.skin-blue .main-sidebar, .skin-blue .left-side, .skin-blue .wrapper { background-color: #171719 !important; }
+.skin-blue .sidebar-menu > li > a { color: #d8d8de !important; border-left: 3px solid transparent; }
+.skin-blue .sidebar-menu > li:hover > a, .skin-blue .sidebar-menu > li.active > a {
+  background: linear-gradient(90deg, rgba(122,0,255,.35), rgba(255,10,160,.15)) !important;
+  color: #fff !important; border-left-color: #ff0aa0 !important;
+}
+.skin-blue .sidebar-menu > li > .treeview-menu { background: #1e1e20 !important; }
+.btn-primary, .bg-light-blue, .label-primary, .progress-bar-light-blue {
+  background: linear-gradient(120deg, #7a00ff, #d900e6 55%, #ff0aa0) !important; border-color: transparent !important;
+}
+.box.box-primary { border-top-color: #d900e6 !important; }
+a { color: #c21fd1; }
+.main-footer a { color: #d900e6; }
+.box.box-solid.box-primary { border-color: #3a2a4a !important; }
+.box.box-solid.box-primary > .box-header {
+  background: linear-gradient(90deg, #2a1640, #3a1340) !important; color: #f2f2f3 !important;
+}
+.box.box-solid.box-primary > .box-header .btn, .box.box-solid.box-primary > .box-header a { color: #f2f2f3 !important; }
+.btn-success { background: linear-gradient(120deg, #7a00ff, #d900e6 55%, #ff0aa0) !important; border-color: transparent !important; }

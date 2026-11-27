@@ -34,6 +34,16 @@ jobs:
           Get-ChildItem -Recurse Ventoy2Disk, Plugson\vs, Vlnk\vs -Include 'Ventoy2Disk*.exe','VentoyPlugson*.exe','VentoyVlnk*.exe' |
             Where-Object { $_.FullName -match 'Release' } |
             ForEach-Object { Copy-Item $_.FullName winbin\ ; Write-Host $_.FullName }
+          # Ventoy2Disk_ARM.exe (32-bit ARM) cannot be built on the hosted runner:
+          # take the upstream binary and swap its icon and version strings.
+          Invoke-WebRequest https://github.com/ventoy/Ventoy/releases/download/v1.1.18/ventoy-1.1.18-windows.zip -OutFile up.zip
+          Expand-Archive up.zip -DestinationPath up
+          Invoke-WebRequest https://github.com/electron/rcedit/releases/download/v2.0.0/rcedit-x64.exe -OutFile rcedit.exe
+          Copy-Item up\ventoy-1.1.18\altexe\Ventoy2Disk_ARM.exe winbin\Ventoy2Disk_ARM.exe
+          .\rcedit.exe winbin\Ventoy2Disk_ARM.exe --set-icon Ventoy2Disk\Ventoy2Disk\Res\ventoy.ico `
+            --set-version-string ProductName AstroBoot --set-version-string FileDescription "AstroBoot2Disk (ARM)" `
+            --set-version-string OriginalFilename AstroBoot2Disk_ARM.exe --set-version-string Comments https://github.com/AstroSoftwareMoon/AstroBoot
+          if ($LASTEXITCODE -ne 0) { exit 1 }
           Get-ChildItem winbin
       - uses: actions/upload-artifact@v4
         with:

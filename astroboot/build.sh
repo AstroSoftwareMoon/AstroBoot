@@ -58,6 +58,16 @@ unzip -q "$CACHE/ventoy-$UPVER-windows.zip" -d "$WORK/up-win"
 UPL=$WORK/up-linux/ventoy-$UPVER
 UPW=$WORK/up-win/ventoy-$UPVER
 
+#------------------------------------------------- Plugson web UI (rebrand) ---
+log "pack plugson.tar.xz (AstroBoot Plugson)"
+rm -rf "$WORK/plugson" && mkdir -p "$WORK/plugson"
+cp -r "$ROOT/Plugson/www" "$WORK/plugson/www"
+( cd "$ROOT/INSTALL/grub/help" && ls -1 ) | while read -r f; do printf '%s' "${f:0:5}"; done > "$WORK/plugson/www/helplist"
+( cd "$ROOT/INSTALL/grub/menu" && ls -1 ) | while read -r f; do printf '%s' "${f:0:5}"; done > "$WORK/plugson/www/menulist"
+printf 'AstroBoot %s' "$VER" > "$WORK/plugson/www/buildtime"
+sed -i "s#<b id=\"plugson_build_date\">[^<]*</b>#<b id=\"plugson_build_date\">AstroBoot $VER</b>#" "$WORK/plugson/www/index.html"
+(cd "$WORK/plugson" && tar --owner=0 --group=0 -cf - www | xz --check=crc32 > "$WORK/plugson.tar.xz")
+
 #----------------------------------------------------------- VTOYEFI files ----
 log "unpack VTOYEFI partition"
 EFI=$WORK/efi
@@ -127,6 +137,7 @@ log "assemble $NAME-linux.tar.gz"
 L=$WORK/linux/$NAME
 mkdir -p "$L"
 cp -a "$UPL/boot" "$UPL/plugin" "$UPL/tool" "$L/"
+cp "$WORK/plugson.tar.xz" "$L/tool/plugson.tar.xz"
 mkdir -p "$L/ventoy"
 cp "$UPL/ventoy/ventoy_4k.disk.img.xz" "$L/ventoy/"
 xz --check=crc32 -c "$IMG" > "$L/ventoy/ventoy.disk.img.xz"
@@ -208,7 +219,7 @@ for f in "$UPW"/altexe/*.exe; do
 done
 cp "$L/ventoy/ventoy.disk.img.xz" "$L/ventoy/ventoy_4k.disk.img.xz" "$L/ventoy/version" \
    "$L/ventoy/astroboot_version" "$Wd/ventoy/"
-cp "$UPW/ventoy/plugson.tar.xz" "$Wd/ventoy/"
+cp "$WORK/plugson.tar.xz" "$Wd/ventoy/"
 cp "$ROOT/LANGUAGES/languages.json" "$Wd/ventoy/languages.json"
 cp "$SELF/README.txt" "$Wd/README.txt"
 cp "$ROOT/COPYING" "$Wd/COPYING.txt"
