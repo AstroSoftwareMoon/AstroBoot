@@ -32,9 +32,15 @@ Después, copia tus archivos `.iso`, `.wim`, `.img`, `.vhd(x)` o `.efi` a la par
   <img src="docs/media/find-os.png" alt="Buscador de sistemas instalados" width="49%">
 </p>
 
-### Instalador web (Linux)
+### Instaladores
 
-<p align="center"><img src="docs/media/webui.png" alt="AstroBoot2Disk web" width="60%"></p>
+<p align="center">
+  <img src="docs/media/windows-installer.png" alt="AstroBoot2Disk en Windows" width="32%">
+  <img src="docs/media/linux-gtk.png" alt="AstroBootGUI en Linux" width="38%">
+  <img src="docs/media/webui.png" alt="AstroBoot2Disk web en Linux" width="27%">
+</p>
+
+<p align="center"><sub>Windows (<code>AstroBoot2Disk.exe</code>, captura del CI en Windows Server 2022) · Linux GTK (<code>AstroBootGUI.x86_64</code>) · Linux web (<code>AstroBootWeb.sh</code>)</sub></p>
 
 > Capturas reales tomadas arrancando el USB de AstroBoot en QEMU (UEFI y BIOS). Los nombres de ISO del menú son archivos de ejemplo; `memtest86+x64.iso` es una ISO real que arranca.
 
@@ -44,7 +50,8 @@ Después, copia tus archivos `.iso`, `.wim`, `.img`, `.vhd(x)` o `.efi` a la par
 - Tema nuevo al estilo de AstroTune: fondo espacial negro con brillos violeta y rosa, panel de cristal, selección en píldora con degradado `#7a00ff → #d900e6 → #ff0aa0`, barra de desplazamiento rosa y fuentes DejaVu Sans.
 - 52 iconos propios: tipo de imagen (ISO, WIM, IMG, VHD, EFI, carpeta) y cada herramienta.
 - Logo y nombre AstroBoot en el menú, la ayuda, los instaladores y los mensajes.
-- Instalador web de Linux rediseñado en modo oscuro con el mismo degradado.
+- **Instalador de Windows rediseñado y recompilado** desde el código fuente con MSVC: ventana oscura, cabecera con el logo, tarjetas, botón Instalar con degradado, barra de progreso magenta, menús oscuros, fuente Segoe UI e icono AstroBoot (también en `AstroBootPlugson.exe` y `AstroBootVlnk.exe`).
+- Instaladores de Linux con el mismo estilo: la GUI GTK usa un tema CSS AstroBoot (`astroboot/gtk/`) e iconos nuevos, y el instalador web está rediseñado en modo oscuro.
 
 **Más herramientas** (al final del menú principal y dentro de **F5**)
 - **Test de memoria RAM** con Memtest86+ 7 (BIOS y UEFI x64).
@@ -88,7 +95,8 @@ AstroBoot usa el núcleo de arranque de Ventoy 1.1.18 tal cual, así que arranca
 Solo donde es obligatorio para que funcione:
 - La partición de arranque se llama `VTOYEFI` y la carpeta de configuración del USB `ventoy/` (con `ventoy.json`). El núcleo las busca por ese nombre.
 - La línea pequeña de créditos de la esquina ("`1.1.18 UEFI  www.ventoy.net`") la dibuja el binario GRUB **firmado**. Quitarla exige recompilar GRUB y perder la firma de Secure Boot, así que AstroBoot la deja como crédito, solo que más discreta y con sus colores.
-- Los ejecutables gráficos de Windows/Linux son los oficiales (también para no romper firmas); sus textos salen de `languages.json`, que ya dice AstroBoot.
+- Los instaladores muestran "1.1.18": es la versión del núcleo de arranque. Abajo a la izquierda de AstroBoot2Disk.exe hay un enlace "Based on Ventoy" como crédito.
+- Las GUI de Linux (GTK/Qt) son los binarios oficiales, compilados para distros antiguas; AstroBoot sustituye sus iconos dentro del binario y les aplica su tema, sin recompilarlos.
 
 ## Compilar
 

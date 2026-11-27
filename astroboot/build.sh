@@ -141,8 +141,24 @@ sed -e 's/VentoyVlnk\.sh/AstroBootVlnk.sh/g' -e '/^ *echo/s/\bVentoy\b/AstroBoot
 cp "$ROOT/INSTALL/tool/VentoyWorker.sh" "$ROOT/INSTALL/tool/ventoy_lib.sh" \
    "$ROOT/INSTALL/tool/VentoyGTK.glade" "$ROOT/INSTALL/tool/distro_gui_type.json" "$L/tool/"
 cp "$ROOT/LANGUAGES/languages.json" "$L/tool/languages.json"
+log "AstroBoot icons in the Linux GUI binaries"
+python3 "$SELF/scripts/patch_gui_icons.py" "$ROOT" "$L/tool"
+# GUI launcher: the real launcher goes to tool/<arch>/AstroBootGUI and the
+# top-level AstroBootGUI.<arch> is a small script that turns on the AstroBoot
+# GTK theme (astroboot/gtk) before starting it. The launcher keeps the
+# environment when it restarts itself through pkexec.
+mkdir -p "$L/tool/gtk"
+cp -r "$SELF/gtk/themes" "$L/tool/gtk/"
 for a in i386 x86_64 aarch64 mips64el; do
-    cp "$UPL/VentoyGUI.$a" "$L/AstroBootGUI.$a"
+    cp "$UPL/VentoyGUI.$a" "$L/tool/$a/AstroBootGUI"
+    cat > "$L/AstroBootGUI.$a" <<EOS
+#!/bin/sh
+# AstroBoot graphical installer ($a)
+cd "\$(dirname "\$(readlink -f "\$0")")" || exit 1
+export GTK_THEME=AstroBoot
+export XDG_DATA_DIRS="\$PWD/tool/gtk:\${XDG_DATA_DIRS:-/usr/local/share:/usr/share}"
+exec ./tool/$a/AstroBootGUI "\$@"
+EOS
 done
 
 # WebUI
@@ -155,7 +171,7 @@ cp "$ROOT/COPYING" "$L/COPYING"
 
 find "$L" -type d -exec chmod 755 {} +
 find "$L" -type f -exec chmod 644 {} +
-chmod +x "$L"/*.sh "$L"/AstroBootGUI.* "$L"/tool/*.sh
+chmod +x "$L"/*.sh "$L"/AstroBootGUI.* "$L"/tool/*.sh "$L"/tool/*/AstroBootGUI
 for a in i386 x86_64 aarch64 mips64el; do
     chmod +x "$L/tool/$a/xzcat" "$L"/tool/$a/Ventoy2Disk.*
 done

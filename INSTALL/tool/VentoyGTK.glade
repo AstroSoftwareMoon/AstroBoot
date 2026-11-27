@@ -341,6 +341,7 @@
                 </child>
                 <child>
                   <object class="GtkButton" id="button_refresh">
+            <property name="name">astro-refresh</property>
                     <property name="width_request">50</property>
                     <property name="visible">True</property>
                     <property name="can_focus">True</property>
@@ -538,6 +539,7 @@
         </child>
         <child>
           <object class="GtkButton" id="button_install">
+            <property name="name">astro-install</property>
             <property name="label" translatable="yes">Install</property>
             <property name="width_request">100</property>
             <property name="height_request">40</property>
@@ -552,6 +554,7 @@
         </child>
         <child>
           <object class="GtkButton" id="button_update">
+            <property name="name">astro-update</property>
             <property name="label" translatable="yes">Update</property>
             <property name="width_request">100</property>
             <property name="height_request">40</property>
@@ -567,6 +570,7 @@
         
         <child>
           <object class="GtkFrame" id="frame_dummy2">
+            <property name="name">astro-dummy</property>
             <property name="width_request">460</property>
             <property name="height_request">25</property>
             <property name="visible">True</property>

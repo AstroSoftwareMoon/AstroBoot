@@ -1,0 +1,115 @@
+/* AstroBoot look for the Linux GTK installer (AstroBootGUI) */
+@import url("resource:///org/gtk/libgtk/theme/Adwaita/gtk-contained-dark.css");
+
+@define-color astro_bg #121115;
+@define-color astro_card #1e1e20;
+@define-color astro_raised #2a2a2d;
+@define-color astro_line #2c2c2e;
+@define-color astro_text #f2f2f3;
+@define-color astro_dim #8e8e93;
+@define-color astro_lav #b98cff;
+@define-color astro_violet #7a00ff;
+@define-color astro_magenta #d900e6;
+@define-color astro_pink #ff0aa0;
+
+window, window.background, dialog {
+  background-color: @astro_bg;
+  color: @astro_text;
+  font-family: "Outfit", "Inter", "Cantarell", "Noto Sans", "DejaVu Sans", sans-serif;
+}
+
+menubar {
+  background: @astro_bg;
+  border-bottom: 1px solid @astro_line;
+  box-shadow: none;
+}
+menubar > menuitem { color: @astro_text; padding: 4px 10px; }
+menubar > menuitem:hover { background: @astro_raised; color: #ffffff; box-shadow: none; }
+menu, .menu, .context-menu {
+  background-color: #1e1e20;
+  border: 1px solid @astro_line;
+  border-radius: 10px;
+  padding: 4px;
+}
+menu menuitem { color: #d8d8de; border-radius: 6px; padding: 5px 10px; }
+menu menuitem:hover {
+  background-image: linear-gradient(to right, @astro_violet, @astro_magenta, @astro_pink);
+  color: #ffffff;
+}
+menu menuitem check:checked, menu menuitem radio:checked { color: @astro_pink; }
+
+/* sections */
+frame {
+  background: transparent;
+  padding: 0;
+}
+frame > border {
+  background-color: @astro_card;
+  border: 1px solid @astro_line;
+  border-radius: 14px;
+}
+frame > label {
+  color: @astro_lav;
+  font-weight: 600;
+}
+#astro-dummy, #astro-dummy > border { background: transparent; border: none; box-shadow: none; }
+
+label { color: @astro_text; }
+label:disabled { color: @astro_dim; }
+
+/* device selector */
+combobox button.combo, combobox box.linked button {
+  background-image: none;
+  background-color: @astro_raised;
+  color: @astro_text;
+  border: 1px solid @astro_line;
+  border-radius: 12px;
+  box-shadow: none;
+  min-height: 30px;
+}
+combobox button.combo:hover { border-color: @astro_magenta; }
+
+/* buttons */
+button {
+  background-image: none;
+  background-color: @astro_card;
+  color: @astro_text;
+  border: 1px solid @astro_magenta;
+  border-radius: 999px;
+  box-shadow: none;
+  text-shadow: none;
+  font-weight: bold;
+  padding: 6px 18px;
+}
+button:hover { background-color: @astro_raised; }
+button:disabled {
+  background-color: #17161a;
+  border-color: @astro_line;
+  color: @astro_dim;
+}
+button:disabled label { color: @astro_dim; }
+
+/* Install button (named in VentoyGTK.glade) */
+#astro-install:not(:disabled) {
+  background-image: linear-gradient(to right, @astro_violet, @astro_magenta, @astro_pink);
+  border-color: transparent;
+  color: #ffffff;
+}
+
+/* progress */
+progressbar trough {
+  background-color: @astro_raised;
+  border: none;
+  border-radius: 999px;
+  min-height: 10px;
+}
+progressbar progress {
+  background-image: linear-gradient(to right, @astro_violet, @astro_magenta, @astro_pink);
+  border: none;
+  border-radius: 999px;
+  min-height: 10px;
+}
+
+dialog .dialog-action-area button, messagedialog button { border-radius: 999px; }
+
+#astro-refresh { border-radius: 12px; padding: 4px; border-color: @astro_line; background-color: @astro_raised; }

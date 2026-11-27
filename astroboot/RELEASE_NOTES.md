@@ -10,7 +10,9 @@ Primera versión de AstroBoot, basada en el núcleo de Ventoy 1.1.18.
 - Tema nuevo estilo familia Astro: fondo espacial, panel de cristal, selección con degradado violeta→rosa, iconos para cada tipo de imagen y herramienta, fuentes DejaVu.
 - Menú **Herramientas AstroBoot** (al final de la lista y dentro de F5): Memtest86+, arranque por red con netboot.xyz, buscador de sistemas instalados (Windows, GRUB, systemd-boot, rEFInd), información del sistema (CPU, RAM, discos, PCI), modos de vídeo, reiniciar/apagar/entrar en UEFI.
 - Menú en español por defecto (cambia con **L**) y textos nuevos traducidos a es, en, pt, fr, de, it.
-- Instalador web de Linux rediseñado; scripts renombrados a `AstroBoot2Disk.sh`, `AstroBootWeb.sh`, `AstroBootPlugson.sh`, `AstroBootVlnk.sh`.
+- **Instalador de Windows nuevo** (`AstroBoot2Disk.exe`), recompilado desde el código fuente: tema oscuro AstroBoot, cabecera con logo, botón Instalar con degradado, barra de título y menús oscuros e icono AstroBoot. `AstroBootPlugson.exe` y `AstroBootVlnk.exe` también llevan el icono nuevo.
+- Instaladores de Linux con el mismo estilo: tema GTK AstroBoot e iconos nuevos en `AstroBootGUI`, e instalador web rediseñado.
+- Scripts renombrados a `AstroBoot2Disk.sh`, `AstroBootWeb.sh`, `AstroBootPlugson.sh`, `AstroBootVlnk.sh`.
 - Etiqueta por defecto de la partición de datos: `AstroBoot` (Linux).
 - Corregido `sr_RS.json` (le faltaba la llave inicial en Ventoy).
 
