@@ -177,8 +177,10 @@ else
     log "WARNING: astroboot/winbin missing, using the upstream Ventoy2Disk.exe"
     cp "$UPW/Ventoy2Disk.exe" "$Wd/AstroBoot2Disk.exe"
 fi
-cp "$UPW/VentoyPlugson.exe" "$Wd/AstroBootPlugson.exe"
-cp "$UPW/VentoyVlnk.exe"    "$Wd/AstroBootVlnk.exe"
+for e in VentoyPlugson VentoyVlnk; do
+    if [ -f "$WB/$e.exe" ]; then src="$WB/$e.exe"; else src="$UPW/$e.exe"; fi
+    cp "$src" "$Wd/${e/Ventoy/AstroBoot}.exe"
+done
 cp "$UPW/FOR_X64_ARM.txt"   "$Wd/"
 for f in "$UPW"/altexe/*.exe; do
     b=$(basename "$f")

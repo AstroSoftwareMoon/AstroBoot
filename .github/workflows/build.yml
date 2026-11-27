@@ -24,8 +24,15 @@ jobs:
             msbuild Ventoy2Disk\Ventoy2Disk.sln /t:Build /m /p:Configuration=Release /p:Platform=$p /p:PlatformToolset=v143
             if ($LASTEXITCODE -ne 0) { exit 1 }
           }
+          foreach ($p in @('Win32','x64')) {
+            msbuild Plugson\vs\VentoyPlugson\VentoyPlugson.sln /t:Build /m /p:Configuration=Release /p:Platform=$p /p:PlatformToolset=v143
+            if ($LASTEXITCODE -ne 0) { exit 1 }
+          }
+          msbuild Vlnk\vs\VentoyVlnk\VentoyVlnk.sln /t:Build /m /p:Configuration=Release /p:Platform=Win32 /p:PlatformToolset=v143
+          if ($LASTEXITCODE -ne 0) { exit 1 }
           New-Item -ItemType Directory -Force winbin | Out-Null
-          Get-ChildItem -Recurse Ventoy2Disk -Filter 'Ventoy2Disk*.exe' | Where-Object { $_.FullName -match 'Release' } |
+          Get-ChildItem -Recurse Ventoy2Disk, Plugson\vs, Vlnk\vs -Include 'Ventoy2Disk*.exe','VentoyPlugson*.exe','VentoyVlnk*.exe' |
+            Where-Object { $_.FullName -match 'Release' } |
             ForEach-Object { Copy-Item $_.FullName winbin\ ; Write-Host $_.FullName }
           Get-ChildItem winbin
       - uses: actions/upload-artifact@v4

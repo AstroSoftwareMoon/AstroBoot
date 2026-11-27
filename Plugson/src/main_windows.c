@@ -47,7 +47,7 @@ const WCHAR *g_msg_cn[MSGID_BUTT] =
 {
     L"错误",
 	L"提醒",
-    L"请在 Ventoy 盘根目录下运行本程序！（存放ISO文件的位置）",
+    L"请在 AstroBoot 盘根目录下运行本程序！（存放ISO文件的位置）",
 	L"创建 ventoy 目录失败，无法继续！",
 	L"ventoy 目录存在，但是大小写不匹配，请先将其重命名！",
 	L"内部错误，程序即将退出！",
@@ -59,14 +59,14 @@ const WCHAR *g_msg_cn[MSGID_BUTT] =
 
 	L"停止运行后浏览器页面将会关闭，是否继续？",
 	L"当前服务正在运行，是否退出？",
-	L"请先关闭正在运行的 VentoyPlugson 程序！",
+	L"请先关闭正在运行的 AstroBoot Plugson 程序！",
 	L"ventoy\\plugson.tar.xz 文件不存在，请在正确的目录下运行！",
 };
 const WCHAR *g_msg_en[MSGID_BUTT] =
 {
     L"Error",
 	L"Info",
-    L"Please run me at the root of Ventoy partition.",
+    L"Please run me at the root of the AstroBoot partition.",
 	L"Failed to create ventoy directory!",
 	L"ventoy directory case mismatch, please rename it first!",
 	L"Internal error, the program will exit!",
@@ -78,7 +78,7 @@ const WCHAR *g_msg_en[MSGID_BUTT] =
 
 	L"The browser page will close after stop, continue?",
 	L"Service is running, continue?",
-	L"Please close another running VentoyPlugson instance!",
+	L"Please close another running AstroBoot Plugson instance!",
 	L"ventoy\\plugson.tar.xz does not exist, please run under the correct directory!",
 };
 
